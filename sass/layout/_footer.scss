@@ -1,0 +1,33 @@
+.footer {
+    background-color: #353535;
+    padding: 20px;
+    text-align: left;
+
+    &__logo {
+        filter: invert(1);
+
+        img{
+            width: 25%;
+        }
+    }
+
+    &__list {
+        list-style-type: none;
+        padding: 0;
+
+        a{
+            text-decoration: none;
+            color: white;
+            font-size: 12px;
+
+            .fa-utensils{
+                margin-right: 10px;
+            }
+
+            .fa-hands-helping{
+                margin-right: 8px;
+                font-size: 10px;
+            }
+        }
+    }
+}
