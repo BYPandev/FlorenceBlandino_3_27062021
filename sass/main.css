@@ -40,6 +40,24 @@ h4 {
   width: 50%;
 }
 
+.location {
+  background-color: #eaeaea;
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+  margin-top: 3px;
+}
+.location__searchfield {
+  background-color: #eaeaea;
+  border: none;
+  font-size: 16px;
+  font-weight: 500;
+}
+.location__icon {
+  margin-right: 10px;
+  margin-left: 72px;
+}
+
 .footer {
   background-color: #353535;
   padding: 20px;
