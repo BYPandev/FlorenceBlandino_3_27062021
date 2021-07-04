@@ -1,4 +1,4 @@
-body {
+body, h4, p {
   margin: 0;
   width: 100%;
 }
@@ -23,8 +23,13 @@ h3 {
 
 h4 {
   font-family: "Roboto", sans-serif;
-  font-weight: 600;
-  font-size: 15px;
+  font-weight: 500;
+  font-size: 18px;
+}
+
+p {
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
 }
 
 .btn-select {
@@ -33,6 +38,10 @@ h4 {
   border-radius: 25px;
   padding: 15px;
   margin: 30px 45px;
+}
+
+.btn-like {
+  font-size: 22px;
 }
 
 .header {
@@ -113,6 +122,34 @@ h4 {
   padding-top: 15px;
 }
 
+.functioning {
+  display: flex;
+  flex-direction: column;
+  padding: 35px 20px;
+}
+.functioning__steps {
+  display: flex;
+  flex-direction: column;
+}
+.functioning__step {
+  margin: 10px;
+  background-color: #f6f6F6;
+  border-radius: 20px;
+  padding: 25px;
+  box-shadow: 2px 2px 12px #CDCAD1;
+}
+.functioning__step:hover {
+  background-color: #f2eafb;
+}
+.functioning__step:hover i {
+  color: #9356DC;
+}
+.functioning__step i {
+  font-size: 16px;
+  width: 30px;
+  color: grey;
+}
+
 .restaurants {
   display: flex;
   flex-direction: column;
@@ -128,23 +165,42 @@ h4 {
 .restaurantbox {
   display: flex;
   flex-direction: column;
+  position: relative;
+  width: 100%;
+  height: 260px;
   background-color: #fff;
   border-radius: 20px;
-  width: 100%;
-  height: 250px;
   margin-bottom: 15px;
+  box-shadow: 2px 2px 12px #CDCAD1;
 }
 .restaurantbox__img {
   width: 100%;
-  height: 75%;
+  height: 70%;
   border-radius: 20px 20px 0px 0px;
   -o-object-fit: cover;
      object-fit: cover;
+}
+.restaurantbox__badge {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  color: #3A8867;
+  font-size: 14px;
+  background-color: #99e2d0;
+  border-radius: 2px;
+  padding: 5px 14px;
 }
 .restaurantbox__description {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px;
-  height: 25%;
+  height: 30%;
+  padding-left: 15px;
+  padding-right: 25px;
+}
+.restaurantbox__text {
+  color: #000;
+}
+.restaurantbox__title {
+  margin-bottom: 3px;
 }/*# sourceMappingURL=main.css.map */

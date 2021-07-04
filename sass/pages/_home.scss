@@ -18,6 +18,40 @@
     }
 }
 
+.functioning {
+    display: flex;
+    flex-direction: column;
+    padding: 35px 20px;
+
+    &__steps {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__step {
+        margin: 10px;
+        background-color: $color-background;
+        border-radius: 20px;
+        padding: 25px;
+        @include box-shadow;
+
+        &:hover{
+            background-color: #f2eafb;
+            
+            i{
+                color:$color-primary;
+            }
+        }
+
+        i {
+            font-size: 16px;
+            width: 30px;
+            color: grey;
+        }
+    }
+
+}
+
 .restaurants{
     display: flex;
     flex-direction: column;
@@ -34,25 +68,48 @@
 .restaurantbox {
     display: flex;
     flex-direction: column;
+    position: relative;
+    width: 100%;
+    height: 260px;
     background-color:$color-white;
     border-radius: 20px;
-    width: 100%;
-    height: 250px;
     margin-bottom: 15px;
-
+    @include box-shadow;
+    
     &__img {
         width: 100%;
-        height: 75%;
+        height: 70%;
         border-radius: 20px 20px 0px 0px;
         object-fit: cover;
+    }
+
+    &__badge {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        color: $color-green-darker; 
+        font-size: 14px;
+        background-color: $color-tertiary;
+        border-radius: 2px;
+        padding: 5px 14px;
+        
     }
 
     &__description {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 10px;
-        height: 25%
-
+        height: 30%;
+        padding-left: 15px;
+        padding-right: 25px;
     }
+
+    &__text {
+        color: $color-black;
+    }
+
+    &__title {
+        margin-bottom: 3px;
+    }
+
 }
