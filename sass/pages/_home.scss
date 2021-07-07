@@ -1,4 +1,5 @@
 @import "../utils/variables";
+@import "../utils/mixins";
 
 .description {
     background-color: $color-background;
@@ -33,10 +34,13 @@
         background-color: $color-background;
         border-radius: 20px;
         padding: 25px 35px;
-        @include box-shadow;
+        cursor: default;
+        @include box-shadow-lighter;
 
         &:hover {
             background-color: #f2eafb;
+            opacity: 0.8;
+            @include box-shadow-darker;
             
             i {
                 color:$color-primary;
@@ -86,7 +90,7 @@
     background-color:$color-white;
     border-radius: 20px;
     margin-bottom: 15px;
-    @include box-shadow;
+    @include box-shadow-lighter;
     
     &__img {
         width: 100%;

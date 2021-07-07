@@ -1,4 +1,12 @@
 // Box Shadow //
-@mixin box-shadow {
-    box-shadow: 2px 2px 12px #CDCAD1;
+@mixin box-shadow-lighter {
+    box-shadow: 2px 2px 12px #87858b;
+}
+
+@mixin box-shadow-darker {
+    box-shadow: 4px 4px 14px #757479
+}
+
+@mixin linear-gradient {
+    background: linear-gradient($color-secondary,$color-primary);
 }
