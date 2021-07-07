@@ -65,7 +65,9 @@
         border-radius: 15px;
         padding: 12px 10px;
         margin-bottom: 15px;
-        @include box-shadow;
+        overflow: hidden;
+        @include box-shadow-lighter;
+        animation: reveal 1s both;
     }
 
     &__sides {
@@ -80,3 +82,57 @@
     }
 }
 
+.reveal-1 {
+    animation-delay: 0.1s;
+}
+
+.reveal-2 {
+    animation-delay: 0.3s;
+}
+
+.reveal-3 {
+    animation-delay: 0.5s;
+}
+
+.reveal-4 {
+    animation-delay: 0.7s;
+}
+
+.reveal-5 {
+    animation-delay: 0.9s;
+}
+
+.reveal-6 {
+    animation-delay: 1.1s;
+}
+
+.reveal-7 {
+    animation-delay: 1.3s;
+}
+
+.reveal-7 {
+    animation-delay: 1.5s;
+}
+
+.reveal-8 {
+    animation-delay: 1.7s;
+}
+
+.reveal-9 {
+    animation-delay: 1.9s;
+}
+
+.reveal-10 { 
+    animation-delay: 2.1s;
+}
+
+
+@keyframes reveal {
+    0% {
+        opacity: 0;
+    }
+    
+    100% {
+        opacity: 1;
+    }
+}
