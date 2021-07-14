@@ -13,7 +13,7 @@
     width: 180px;
     @include linear-gradient;
     @include box-shadow-lighter;
-    transition: transform 600ms;
+    transition: all 600ms;
     &:hover {
         transform: scale(1.1);
         opacity: 0.9;
@@ -21,6 +21,26 @@
     }
 }
 
-.btn-like {
+.like {
     font-size: 24px;
+    cursor: pointer;
+    z-index: 15;
+    
+    &:hover {
+        .like__btn{
+            @include active-heart;
+        }
+    }
+
+    &:focus {
+        .like__btn{
+            @include active-heart;
+        }
+    }
+}
+
+.like__btn--home{
+    position: relative;
+    bottom: 70px;
+    left: 280px;
 }
