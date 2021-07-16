@@ -39,7 +39,7 @@
 
         &:hover {
             background-color: #f2eafb;
-            opacity: 0.8;
+            opacity: 0.9;
             @include box-shadow-darker;
             
             i {
@@ -81,17 +81,23 @@
     }
 }
 
-.restaurantbox {
+.restaurant-box {
     display: flex;
     flex-direction: column;
     position: relative;
     width: 100%;
+    max-width: 360px;
     height: 260px;
     background-color:$color-white;
     border-radius: 20px;
     margin-bottom: 15px;
     @include box-shadow-lighter;
-    
+    transition: all 500ms;
+    &:hover {
+        transform: scale(1.03);
+        @include box-shadow-darker;
+    }
+
     &__img {
         width: 100%;
         height: 70%;

@@ -59,6 +59,8 @@
 .meal {
     display: flex;
     flex-direction: column;
+    animation: reveal 1s both;
+    
 
     &__title {
         font-size: 16px;
@@ -71,11 +73,13 @@
         border-radius: 15px;
         margin-bottom: 15px;
         overflow: hidden;
+        cursor: pointer;
         @include box-shadow-lighter;
         animation: reveal 1s both;
     }
 
     &__text{
+        width: 75%;
         padding: 10px;
         @extend %text-overflow;
     }
@@ -99,7 +103,7 @@
 
     .checkbox {
         display: none;
-        width: 18%;
+        width: 25%;
         border-bottom-right-radius: 15px;
         border-top-right-radius: 15px;
     }
@@ -115,50 +119,11 @@
     }
 }
 
-.reveal-1 {
-    animation-delay: 0.1s;
+@for $i from 1 through 10 {
+    .reveal-#{$i} {
+        animation-delay: 0.5s * $i;
+    }
 }
-
-.reveal-2 {
-    animation-delay: 0.3s;
-}
-
-.reveal-3 {
-    animation-delay: 0.5s;
-}
-
-.reveal-4 {
-    animation-delay: 0.7s;
-}
-
-.reveal-5 {
-    animation-delay: 0.9s;
-}
-
-.reveal-6 {
-    animation-delay: 1.1s;
-}
-
-.reveal-7 {
-    animation-delay: 1.3s;
-}
-
-.reveal-7 {
-    animation-delay: 1.5s;
-}
-
-.reveal-8 {
-    animation-delay: 1.7s;
-}
-
-.reveal-9 {
-    animation-delay: 1.9s;
-}
-
-.reveal-10 { 
-    animation-delay: 2.1s;
-}
-
 
 @keyframes reveal {
     0% {
@@ -171,7 +136,7 @@
 }
 
 
-.meal__description:hover .checkbox {
+.meal__description:focus .checkbox {
     display: block;
     background: $color-tertiary;
     overflow: hidden;
@@ -181,7 +146,7 @@
     transform-origin: 50% 50%;
 }
 
-.meal__description:hover .meal__price {
+.meal__description:focus .meal__price {
     animation: checkbox ease 0.3s;
     animation-fill-mode: forwards;
     animation-iteration-count: 1;
