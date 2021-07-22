@@ -1,7 +1,7 @@
 @import "../utils/variables";
 @import "../utils/mixins";
 
-
+/* Select button */
 .btn-select {
     text-align: center;
     display: inline-block;
@@ -21,9 +21,12 @@
     }
 }
 
+/* Like button */
 .like {
     font-size: 24px;
     cursor: pointer;
+    margin: 10px;
+
     &:hover {
         .like__btn{
             color: $color-primary;

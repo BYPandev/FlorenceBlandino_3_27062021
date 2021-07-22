@@ -10,17 +10,16 @@
         color: $color-black;
         font-size: 20px;
     }
-    
 }
 
-.menu-cover{
+.menu-cover {
     width: 100%;
     height: 250px;
     object-fit: cover;
 }
 
 .menu {
-    display:flex;
+    display: flex;
     flex-direction: column;
     background-color: $color-background;
     border-radius: 35px 35px 0 0;
@@ -38,6 +37,7 @@
     &__name {
         font-family: $menu-title-font;
         font-size: 28px;
+        margin: 10px;
     }
 
     &__like {
@@ -45,6 +45,7 @@
     }
 }
 
+/* Meals list */
 .meals_list{
     display: flex;
     flex-direction: column;
@@ -59,11 +60,30 @@
 .meal {
     display: flex;
     flex-direction: column;
+    position: relative;
+    flex-wrap: wrap;
     animation: reveal 1s both;
-    
 
+    @media (min-width: 500px){
+        width: 100%;
+        flex-direction: row;
+    }
+    
     &__title {
         font-size: 16px;
+        display: flex;
+        position: relative;
+        width: 100%;
+        margin: 10px;
+        
+        &::before {
+            content: '';
+            height: 2px;
+            width: 40px;
+            background-color: $color-tertiary;
+            bottom: -5px;
+            position: absolute;
+        }
     }
 
     &__description {
@@ -74,17 +94,29 @@
         margin-bottom: 15px;
         overflow: hidden;
         cursor: pointer;
-        @include box-shadow-lighter;
         animation: reveal 1s both;
+        width: calc(100% - 20px);
+        margin: 10px;
+        @include box-shadow-lighter; 
+
+        @media (min-width: 600px) {
+            flex-direction: row;
+            width: calc(100%/2 - 20px) ;
+        }
+
+        @include tablet {
+            width: calc(100%/3 - 20px) ;
+        }
+        
     }
 
-    &__text{
+    &__text {
         width: 75%;
         padding: 10px;
         @extend %text-overflow;
     }
 
-    &__name{
+    &__name {
         @extend %text-overflow;
     }
 
@@ -103,7 +135,7 @@
 
     .checkbox {
         display: none;
-        width: 25%;
+        width: 80px;
         border-bottom-right-radius: 15px;
         border-top-right-radius: 15px;
     }
@@ -135,8 +167,7 @@
     }
 }
 
-
-.meal__description:focus .checkbox {
+.meal__description:hover .checkbox {
     display: block;
     background: $color-tertiary;
     overflow: hidden;
@@ -146,12 +177,11 @@
     transform-origin: 50% 50%;
 }
 
-.meal__description:focus .meal__price {
+.meal__description:hover .meal__price {
     animation: checkbox ease 0.3s;
     animation-fill-mode: forwards;
     animation-iteration-count: 1;
 }
-
 
 @keyframes checkbox {
     0% {
@@ -198,5 +228,5 @@
     100% {
       transform: rotate(360deg);
     }
-  }
+}
   
