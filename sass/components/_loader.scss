@@ -28,15 +28,15 @@
         bottom: 0;
         animation: loader 1.7s linear;
         visibility: hidden;
-
-        span {
-            width: 6px;
-            height: 6px;
-            margin: 4px;
-            background: $color-primary;
-            border-radius: 32px;
-            animation: bubbling 0.5s infinite alternate;
-        }
+    }
+    
+    &__bubbles {
+        width: 6px;
+        height: 6px;
+        margin: 4px;
+        background: $color-primary;
+        border-radius: 32px;
+        animation: bubbling 0.5s infinite alternate;
     }
 }
 

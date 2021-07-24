@@ -123,6 +123,7 @@
             background-color:$color-white;
             width: calc(100%/2 - 20px);
             height: 260px;
+            max-width: 580px;
             border-radius: 20px;
             margin: 10px;
             transition: all 500ms;

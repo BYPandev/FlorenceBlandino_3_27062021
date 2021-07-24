@@ -101,7 +101,7 @@ p {
           animation: loader 1.7s linear;
   visibility: hidden;
 }
-.loader__bubblings span {
+.loader__bubbles {
   width: 6px;
   height: 6px;
   margin: 4px;
@@ -371,6 +371,7 @@ p {
   background-color: #fff;
   width: calc(100%/2 - 20px);
   height: 260px;
+  max-width: 580px;
   border-radius: 20px;
   margin: 10px;
   transition: all 500ms;
@@ -449,19 +450,18 @@ p {
   position: relative;
   padding: 0px 15px 30px 15px;
 }
-
-.restaurant {
+.menu .restaurant {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding-top: 10px;
 }
-.restaurant__name {
+.menu .restaurant__name {
   font-family: "Shrikhand";
   font-size: 28px;
   margin: 10px;
 }
-.restaurant__like {
+.menu .restaurant__like {
   margin-right: 20px;
 }
 
@@ -469,12 +469,6 @@ p {
 .meals_list {
   display: flex;
   flex-direction: column;
-}
-
-.meal__sides, .meal__name, .meal__text {
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
 }
 
 .meal {
@@ -562,6 +556,34 @@ p {
           animation: check-rotate ease 0.3s 1;
 }
 
+.meal__description:hover .checkbox {
+  display: block;
+  background: #99e2d0;
+  overflow: hidden;
+  -webkit-animation: checkbox ease 0.3s;
+          animation: checkbox ease 0.3s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  transform-origin: 50% 50%;
+}
+
+.meal__description:hover .meal__price {
+  -webkit-animation: checkbox ease 0.3s;
+          animation: checkbox ease 0.3s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+}
+
+.meal__text, .meal__name, .meal__sides {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
 .reveal-1 {
   -webkit-animation-delay: 0.5s;
           animation-delay: 0.5s;
@@ -629,28 +651,6 @@ p {
     opacity: 1;
   }
 }
-.meal__description:hover .checkbox {
-  display: block;
-  background: #99e2d0;
-  overflow: hidden;
-  -webkit-animation: checkbox ease 0.3s;
-          animation: checkbox ease 0.3s;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-  -webkit-animation-iteration-count: 1;
-          animation-iteration-count: 1;
-  transform-origin: 50% 50%;
-}
-
-.meal__description:hover .meal__price {
-  -webkit-animation: checkbox ease 0.3s;
-          animation: checkbox ease 0.3s;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-  -webkit-animation-iteration-count: 1;
-          animation-iteration-count: 1;
-}
-
 @-webkit-keyframes checkbox {
   0% {
     transform: translate(50px, 0);
@@ -671,7 +671,6 @@ p {
     transform: translate(1px, 0);
   }
 }
-
 @keyframes checkbox {
   0% {
     transform: translate(50px, 0);

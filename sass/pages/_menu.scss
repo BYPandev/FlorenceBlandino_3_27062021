@@ -26,35 +26,30 @@
     margin-top: -45px;
     position: relative;
     padding: 0px 15px 30px 15px;
-}
 
-.restaurant {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding-top: 10px;
-
-    &__name {
-        font-family: $menu-title-font;
-        font-size: 28px;
-        margin: 10px;
-    }
-
-    &__like {
-        margin-right: 20px;
+    .restaurant {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-top: 10px;
+    
+        &__name {
+            font-family: $menu-title-font;
+            font-size: 28px;
+            margin: 10px;
+        }
+    
+        &__like {
+            margin-right: 20px;
+        }
     }
 }
 
 /* Meals list */
+
 .meals_list{
     display: flex;
     flex-direction: column;
-}
-
-%text-overflow {
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
 }
 
 .meal {
@@ -151,22 +146,6 @@
     }
 }
 
-@for $i from 1 through 10 {
-    .reveal-#{$i} {
-        animation-delay: 0.5s * $i;
-    }
-}
-
-@keyframes reveal {
-    0% {
-        opacity: 0;
-    }
-    
-    100% {
-        opacity: 1;
-    }
-}
-
 .meal__description:hover .checkbox {
     display: block;
     background: $color-tertiary;
@@ -181,6 +160,28 @@
     animation: checkbox ease 0.3s;
     animation-fill-mode: forwards;
     animation-iteration-count: 1;
+}
+
+%text-overflow {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+@for $i from 1 through 10 {
+    .reveal-#{$i} {
+        animation-delay: 0.5s * $i;
+    }
+}
+
+@keyframes reveal {
+    0% {
+        opacity: 0;
+    }
+    
+    100% {
+        opacity: 1;
+    }
 }
 
 @keyframes checkbox {
