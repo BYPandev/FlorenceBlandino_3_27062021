@@ -26,16 +26,15 @@
     font-size: 24px;
     cursor: pointer;
     margin: 10px;
+    font-weight: bold;
 
-    &:hover {
-        .like__btn{
-            color: $color-primary;
-        }
-    }
-
-    &:focus {
-        .like__btn{
-            @include active-heart;
-        }
+    &__btn:focus {
+        @include linear-gradient;
+        background-clip: border-box;
+        background-clip: text;
+        color: transparent;
+        -webkit-background-clip: text;
+        font-weight: bold;
+        transition: all 0.8s linear;
     }
 }

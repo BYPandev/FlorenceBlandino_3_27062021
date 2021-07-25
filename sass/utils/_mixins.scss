@@ -1,3 +1,5 @@
+@import "../utils/variables";
+
 // Box Shadow //
 @mixin box-shadow-lighter {
     box-shadow: 2px 2px 12px #afaeb3;
@@ -10,14 +12,6 @@
 // Linear gradient //
 @mixin linear-gradient {
     background: linear-gradient($color-secondary,$color-primary);
-}
-
-// Like button animation //
-@mixin active-heart {
-    color: $color-secondary;
-    font-weight: bold;
-    cursor: pointer;
-    transition: color 0.6s ease;
 }
 
 // Media queries //
