@@ -1,5 +1,6 @@
 body, h4, p {
-  margin: 0;
+  margin: 0 auto;
+  padding: 0;
   width: 100%;
 }
 
@@ -223,6 +224,7 @@ p {
 /* Footer */
 .footer {
   background-color: #353535;
+  margin: 0;
   padding: 20px;
   text-align: left;
 }
@@ -442,6 +444,12 @@ p {
 .menu-cover {
   width: 100%;
   height: 250px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.menu-cover__img {
+  width: 100%;
+  height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
